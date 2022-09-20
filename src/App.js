@@ -5,7 +5,8 @@ constructor(props)
     super(props);
     this.state = {
         nom:'',
-        prenom:''
+        prenom:'',
+        age:''
     }
     this.handleSubmit=this.handleSubmit.bind(this);
 }
@@ -23,8 +24,9 @@ render(){
             <form onSubmit={this.handleSubmit}>
                 <h1>Profil de {this.state.nom+" "+this.state.prenom}</h1>
                 Nom:<input type="text" value={this.state.nom} onChange={this.onChange} name="nom"></input>
-                Prenom:<input type="text" value={this.state.prenom} name="prenom" onChange={this.onChange}></input>
-                <button type="submit" >Afficher message</button>
+                <br></br>Prenom:<input type="text" value={this.state.prenom} name="prenom" onChange={this.onChange}></input>
+                <br></br>Age:<input type="text" value={this.state.age} name="age" onChange={this.onChange}></input>
+                <br></br><button type="submit" >Afficher message</button>
             </form>
         </div>);
 }
