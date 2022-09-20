@@ -8,14 +8,23 @@ constructor(props)
         prenom:'',
         age:''
     }
-    this.handleSubmit=this.handleSubmit.bind(this);
+  //  this.handleSubmit=this.handleSubmit.bind(this);
+  // unitile avec les fonctions fléché
 }
 onChange= e=> {
     this.setState({ [e.target.name] :e.target.value});
 };
-handleSubmit(event)
+handleSubmit = event =>
 {
-    alert("Bonjour "+this.state.nom+" "+ this.state.prenom);
+   // alert("Bonjour "+this.state.nom+" "+ this.state.prenom);
+   let ag=this.state.age;
+   if(ag<16)
+   alert("junior");
+   else if(ag<80)
+   alert("majeur");
+   else
+   alert("sénior");
+
     event.preventDefault();
 }
 render(){
