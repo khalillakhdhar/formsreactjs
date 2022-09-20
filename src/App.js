@@ -9,7 +9,7 @@ updateSubmit(event) {
 alert('You have entered the UserName and CompanyName successfully.');
 event.preventDefault();
 }
-FREE
+
 render() {
 return (
 <form onSubmit={this.updateSubmit}>
